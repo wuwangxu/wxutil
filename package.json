@@ -1,8 +1,10 @@
 {
-  "name": "wxutil",
+  "name": "@wangxuya/wxutil",
   "version": "0.0.1",
   "repository": "https://github.com/wuwangxu/wxutil.git",
-  "main": "dist/wxutil.esm.js",
+  "main": "dist/wxutil.cjs.js",
+  "module": "dist/wxutil.esm.js",
+  "browser": "dist/wxutil.umd.js",
   "author": "WangXu <wuwangxu@126.com>",
   "license": "MIT",
   "scripts": {
