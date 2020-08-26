@@ -11,7 +11,7 @@
 ``` html
   <script src="wxutil.min.js"></script>
   <script>
-      var params = _.getParamByName('a')
+      var params = wxutil.getParamByName('a')
   </script>
 ```
 

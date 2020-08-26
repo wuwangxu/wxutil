@@ -11,7 +11,7 @@ export default [
   {
     input: "src/main.ts",
     output: {
-      name: "_",
+      name: "wxutil",
       file: "dist/wxutil.min.js",
       format: "umd"
     },
@@ -34,9 +34,29 @@ export default [
     input: "src/main.ts",
     output: [
       { file: pkg.main, format: "cjs" },
-      { file: pkg.module, format: "es" },
-      { file: pkg.browser, format: "umd" },
+      { file: pkg.module, format: "es" }
     ],
+    plugins: [
+      resolve({
+        extensions: [".js", ".ts"]
+      }),
+      commonjs({
+        include: "node_modules/**"
+      }),
+      babel({
+        extensions: [".js", ".ts"],
+        runtimeHelpers: true,
+        exclude: ["node_modules/**"]
+      })
+    ]
+  },
+  {
+    input: "src/main.ts",
+    output: {
+      name: 'wxutil',
+      file: pkg.browser,
+      format: "umd"
+      },
     plugins: [
       resolve({
         extensions: [".js", ".ts"]

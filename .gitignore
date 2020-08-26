@@ -41,3 +41,4 @@ _rg/.*.data
 dist/debug
 *sonar*
 coverage
+dist

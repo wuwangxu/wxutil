@@ -1,3 +1,5 @@
+import _typeof from '@babel/runtime/helpers/typeof';
+
 var url = {
   /**
    * 获取url参数
@@ -49,30 +51,6 @@ var url = {
 var getParamByName = url.getParamByName;
 var parseQueryString = url.parseQueryString;
 
-function createCommonjsModule(fn, module) {
-	return module = { exports: {} }, fn(module, module.exports), module.exports;
-}
-
-var _typeof_1 = createCommonjsModule(function (module) {
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
-});
-
 var env = {
   /**
    * ios环境
@@ -113,7 +91,7 @@ var env = {
    * @returns {boolean}
    */
   isBrowser: function isBrowser() {
-    return (typeof window === "undefined" ? "undefined" : _typeof_1(window)) === "object" && (typeof document === "undefined" ? "undefined" : _typeof_1(document)) === "object" && document.nodeType === 9;
+    return (typeof window === "undefined" ? "undefined" : _typeof(window)) === "object" && (typeof document === "undefined" ? "undefined" : _typeof(document)) === "object" && document.nodeType === 9;
   },
 
   /**
